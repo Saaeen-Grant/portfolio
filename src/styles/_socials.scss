@@ -1,0 +1,17 @@
+.socials {
+    display: flex;
+    gap: 16px;
+    width: fit-content;
+
+    &__link {
+        line-height: 0;
+        background-color: $dark;
+        padding: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+
+        svg * {
+            color: $light;
+        }
+    }
+}

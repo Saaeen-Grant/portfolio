@@ -1,0 +1,31 @@
+.btn {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    @extend %button-cta-format;
+
+    .btn-icon {line-height: 0;}
+    .btn-icon--none {display: none;}
+}
+
+.btn--default {
+    background-color: $dark;
+    color: $light;
+
+    .btn-icon {
+        svg * {color: $light;}
+    }
+}
+
+.btn--outline {
+    background-color: $light;
+    border: 1.24px $dark solid;
+    color: $dark;
+
+    .btn-icon {
+        svg * {color: $dark;}
+    }
+}

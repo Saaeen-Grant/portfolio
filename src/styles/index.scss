@@ -1,26 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import 'colors';
+@import 'navigation';
+@import 'about';
+@import "button";
+@import "socials";
+@import "breakpoints";
+@import "intro";
+@import "portfolio";
+@import "contact";
+@import "footer";
+
 
 $font-family: 'Inter', sans-serif;
 
-
-
 * {
     font-family: $font-family;
-    color: $dark;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-size: inherit;
     font-weight: inherit;
+    letter-spacing: 0.76px;    
+    color: $dark;
 }
 
 body {
     background-color: $light;
+    text-align: center;
+
+
 }
 
-.container {
-    max-width: 696px;
-    margin: 0 auto;
-    border: 1px solid red;
+input, button, textarea {
+    font: inherit; 
+    outline: none;
 }
+
+input, textarea {
+    border: 1.24px $neutral-dark solid;
+    width: 100%;
+    @extend %button-cta-format;
+}
+
+a {text-decoration: none;}
+ul {list-style: none;}
+
+svg {
+    width: 24px;
+    height: 24px;
+}
+
+.container { 
+    margin: 24px;
+
+    @include breakpoint(medium) {
+        margin: 0 auto;
+        max-width: 696px;
+    }
+}
+
+%base-text {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+%heading-1 {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: bold;
+}
+
+%heading-2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+}
+
+%heading-3 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+%neutral-text {
+    @extend %base-text;
+    color: $neutral-dark;
+}
+
+%button-cta-format {
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+.heading {
+    h3 {@extend %heading-3;}
+    p {@extend %neutral-text }
+}
+
+
+

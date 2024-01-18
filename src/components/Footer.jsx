@@ -1,8 +1,13 @@
+import Socials from './Socials'
+
 function Footer() {
 
     return (
       <>
-        <h1>Footer</h1>
+       <footer>
+          <p>&copy;2023 Saaeen Grant | All Rights Reserved</p>
+          <Socials/>
+       </footer>
       </>
     )
   }
