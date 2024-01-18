@@ -2,6 +2,8 @@ import Socials from './Socials'
 import { Button } from './Button'
 
 
+import React from 'react'
+
 function Intro() {
 
     return (

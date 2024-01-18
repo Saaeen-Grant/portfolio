@@ -1,3 +1,5 @@
+import React from 'react'
+
 import {GithubLogo, LinkedinLogo, EnvelopeSimple} from "@phosphor-icons/react"
 
 const socials = [<GithubLogo/>, <LinkedinLogo/>, <EnvelopeSimple/>]

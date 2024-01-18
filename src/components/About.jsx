@@ -1,3 +1,4 @@
+import React from 'react'
 import Headshot from '../assets/headshot.png'
 import Circle from '../assets/text-circle.svg'
 

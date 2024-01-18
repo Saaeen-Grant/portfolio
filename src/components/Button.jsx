@@ -1,3 +1,5 @@
+import React from 'react'
+
 import {ArrowCircleRight, ArrowCircleUpRight, PaperPlaneTilt} from "@phosphor-icons/react"
 
 const STYLES = ['btn--default','btn--outline', 'btn--text']
