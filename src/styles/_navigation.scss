@@ -1,10 +1,9 @@
 .navigation {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: relative;
-    line-height: 0;
     
-
     &__menu--mobile {
         display: flex;
         flex-direction: column;
@@ -35,14 +34,23 @@
 
     &__menu--desktop {
         display: none;
+
+        @include breakpoint(medium) {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
     }
 
     &__toggle {
         background-color: white;
         svg {
-        width: 40px;
-        height: 40px;
-        background-color: white;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+        }
+        @include breakpoint(medium) {
+            display: none;
         }
     }
 

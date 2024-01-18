@@ -1,19 +1,15 @@
 .portfolio {
-    &__projects {
-        h1 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            gap: 12px;
-            padding: 24px 0;
-            
-            @extend %heading-3;
 
-            svg {
-                width: 32px;
-                height: 32px;
-            }
+    &__placeholder {
+        border: 1.24px solid $neutral-dark;
+        border-radius: 8px;
+        text-align: center;
+        margin: 24px 0;
+        padding: 24px 0;
+
+        p {
+            color: $neutral-dark;
         }
+
     }
 }

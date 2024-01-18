@@ -14,7 +14,7 @@ function About() {
           </div>
           <div className="about__col-2">
             <div className="about__heading heading">
-              <h3>About Me</h3>
+              <h2>About Me</h2>
               <p>A passionate computer science student</p>
             </div>
             <div className="about__body">

@@ -17,6 +17,13 @@ function Navigation() {
           {isActive ? <X/> : <List/>}
       </div>
 
+      <ul className="navigation__menu--desktop">
+        <li><a className="navigation__link" href="#">About</a></li>
+        <li><a className="navigation__link" href="#">Projects</a></li>
+        <li><a className="navigation__link" href="#">Resume</a></li>
+        <li><a className="navigation__link" href="#">Contact</a></li>
+      </ul>
+
       <div className={`navigation__mode ${mode ? "navigation__mode--dark" : "navigation__mode--light"}`} onClick={() => setMode((prev) => !prev)}>
         {
           mode 
@@ -24,13 +31,6 @@ function Navigation() {
           : <Sun/>
         }
       </div>
-
-      <ul className="navigation__menu--desktop">
-        <li><a className="navigation__link" href="#">About</a></li>
-        <li><a className="navigation__link" href="#">Projects</a></li>
-        <li><a className="navigation__link" href="#">Resume</a></li>
-        <li><a className="navigation__link" href="#">Contact</a></li>
-      </ul>
 
       { 
         isActive 

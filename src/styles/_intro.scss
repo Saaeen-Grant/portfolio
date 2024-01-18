@@ -1,22 +1,35 @@
 .intro {
-    padding: 100px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 24px;
 
-    &__title {
-        h1 {@extend %heading-2;}
+    @include breakpoint(medium) {
+        align-items: start;
     }
 
-    &__body {@extend %base-text;}
+    &__title {
+
+        @include breakpoint(medium) {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
 
     &__cta {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: inherit;
+        width: 100%;
+
+        @include breakpoint(medium) {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    
 
         .intro__buttons {
             display: flex;

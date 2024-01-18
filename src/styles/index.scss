@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import 'colors';
+@import "breakpoints";
 @import 'navigation';
 @import 'about';
 @import "button";
 @import "socials";
-@import "breakpoints";
 @import "intro";
 @import "portfolio";
 @import "contact";
@@ -28,6 +28,9 @@ body {
     background-color: $light;
     text-align: center;
 
+    @include breakpoint(medium) {
+        text-align: left;
+    }
 
 }
 
@@ -54,36 +57,63 @@ svg {
     margin: 24px;
 
     @include breakpoint(medium) {
-        margin: 0 auto;
+        margin: 24px auto;
         max-width: 696px;
+    }
+
+    > *:not(:last-child) {
+        margin-bottom: 100px;
     }
 }
 
-%base-text {
+p {
     font-size: 16px;
     line-height: 24px;
 }
 
-%heading-1 {
-    font-size: 36px;
-    line-height: 48px;
-    font-weight: bold;
-}
-
-%heading-2 {
+h1 {
     font-size: 24px;
     line-height: 32px;
     font-weight: bold;
+
+    @include breakpoint(medium) {
+        font-size: 36px;
+        line-height: 48px;
+    }
 }
 
-%heading-3 {
+h2 {
     font-size: 20px;
     line-height: 28px;
     font-weight: bold;
 }
 
+
+
+// %base-text {
+//     font-size: 16px;
+//     line-height: 24px;
+// }
+
+// %heading-1 {
+//     font-size: 36px;
+//     line-height: 48px;
+//     font-weight: bold;
+// }
+
+// %heading-2 {
+//     font-size: 24px;
+//     line-height: 32px;
+//     font-weight: bold;
+// }
+
+// %heading-3 {
+//     font-size: 20px;
+//     line-height: 28px;
+//     font-weight: bold;
+// }
+
 %neutral-text {
-    @extend %base-text;
     color: $neutral-dark;
 }
 
@@ -93,7 +123,9 @@ svg {
 }
 
 .heading {
-    h3 {@extend %heading-3;}
+    h2 {
+        margin-bottom: 4px;
+    }
     p {@extend %neutral-text }
 }
 
