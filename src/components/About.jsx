@@ -1,6 +1,6 @@
 import React from 'react'
 import Headshot from '../assets/headshot.png'
-import Circle from '../assets/text-circle.svg'
+import CustomSVG from './CustomSVG'
 
 function About() {
 
@@ -9,7 +9,7 @@ function About() {
         <section className="about">
           <div className="about__col-1">
             <div className="about__image">
-              <img src={Circle} alt="Saaeen Grant" />
+              <CustomSVG/>
               <img src={Headshot} alt="Saaeen Grant" />
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState } from "react"
+import { useContext ,useState } from "react"
+import { DarkModeContext } from '../context/DarkModeContext'
 import {List, X, Sun, Moon} from "@phosphor-icons/react"
 
 
@@ -7,10 +8,11 @@ import {List, X, Sun, Moon} from "@phosphor-icons/react"
 function Navigation() {
   
   const [isActive, setIsActive] = useState(false)
-  const [mode, setMode] = useState(false)
+  const {mode, isDarkMode} = useContext(DarkModeContext)
 
   const toggleMenu = () => setIsActive((prev) => !prev)
-
+  const toggleMode = () => isDarkMode((prev) => !prev)
+  
   return (
     <nav className="navigation">
 
@@ -25,7 +27,7 @@ function Navigation() {
         <li><a className="navigation__link" href="#">Contact</a></li>
       </ul>
 
-      <div className={`navigation__mode ${mode ? "navigation__mode--dark" : "navigation__mode--light"}`} onClick={() => setMode((prev) => !prev)}>
+      <div className="navigation__mode" onClick={toggleMode}>
         {
           mode 
           ? <Moon/>

@@ -20,12 +20,12 @@ $font-family: 'Inter', sans-serif;
     padding: 0;
     font-size: inherit;
     font-weight: inherit;
-    letter-spacing: 0.76px;    
-    color: $dark;
+    letter-spacing: 0.76px;  
+    color: var(--foreground);
 }
 
-body {
-    background-color: $light;
+.app {
+    background-color: var(--background);
     text-align: center;
 
     @include breakpoint(medium) {
@@ -40,8 +40,9 @@ input, button, textarea {
 }
 
 input, textarea {
-    border: 1.24px $neutral-dark solid;
+    border: 1.24px var(--neutral) solid;
     width: 100%;
+    background-color: var(--background);
     @extend %button-cta-format;
 }
 
@@ -54,11 +55,13 @@ svg {
 }
 
 .container { 
-    margin: 24px;
+    padding: 24px;
 
     @include breakpoint(medium) {
-        margin: 24px auto;
+        margin: 0 auto;
         max-width: 696px;
+        padding: 24px 0;
+
     }
 
     > *:not(:last-child) {
@@ -114,7 +117,7 @@ h2 {
 // }
 
 %neutral-text {
-    color: $neutral-dark;
+    color: var(--neutral);
 }
 
 %button-cta-format {

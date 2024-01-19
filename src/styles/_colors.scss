@@ -4,3 +4,17 @@ $neutral-dark: #7C7C7C;
 $neutral-light: #BBBBBB;
 $sun: #FFD951;
 $moon: #A449FF;
+
+:root {
+    --background: #{$dark};
+    --foreground: #{$light};
+    --neutral: #{$neutral-light};
+    --mode: #{$moon};
+}
+
+[data-theme="light"] {
+    --background: #{$light};
+    --foreground: #{$dark};
+    --neutral: #{$neutral-dark};
+    --mode: #{$sun};
+}

@@ -3,17 +3,25 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+
+    a:hover {
+        text-shadow:0 0 1px var(--foreground);
+    }
     
     &__menu--mobile {
         display: flex;
         flex-direction: column;
         position: absolute;
-        background-color: $light;
+        background-color: var(--background);
         top: 100%;
         padding: 8px;
         gap: 8px;
         width: 50%;
         line-height: 24px;
+
+        @include breakpoint(medium) {
+            display: none;
+        }
 
         li {
             display: flex;
@@ -24,10 +32,6 @@
             padding: 8px 0;
             text-align: center;
             border-radius: 8px;
-          }
-
-          a:hover {
-           font-weight: bold;
           }
         }
     }
@@ -43,11 +47,11 @@
     }
 
     &__toggle {
-        background-color: white;
+        background-color: var(--background);
         svg {
             width: 40px;
             height: 40px;
-            background-color: white;
+            background-color: var(--background);
         }
         @include breakpoint(medium) {
             display: none;
@@ -61,17 +65,10 @@
         line-height: 0;
         cursor: pointer;
         box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+        background-color: var(--mode);
     }
 
-    &__mode--light {
-        background-color: $sun;
-    }
-
-    &__mode--dark {
-        background-color: $moon;
-
-        svg * {
-            color: $light;
-        }
+    svg * {
+        color: var(--foreground);
     }
 }

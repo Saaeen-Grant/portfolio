@@ -5,13 +5,13 @@
 
     &__link {
         line-height: 0;
-        background-color: $dark;
+        background-color: var(--foreground);
         padding: 8px;
         border-radius: 8px;
         cursor: pointer;
 
         svg * {
-            color: $light;
+            color: var(--background);
         }
     }
 }

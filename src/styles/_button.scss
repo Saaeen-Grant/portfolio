@@ -12,20 +12,20 @@
 }
 
 .btn--default {
-    background-color: $dark;
-    color: $light;
+    background-color: var(--foreground);
+    color: var(--background); 
 
     .btn-icon {
-        svg * {color: $light;}
+        svg * {color: var(--background);}
     }
 }
 
 .btn--outline {
-    background-color: $light;
-    border: 1.24px $dark solid;
-    color: $dark;
+    background-color: var(--background);
+    border: 1.24px var(--foreground) solid;
+    color: var(--foreground);
 
     .btn-icon {
-        svg * {color: $dark;}
+        svg * {color: var(--foreground);}
     }
 }
