@@ -38,10 +38,10 @@ function Navigation() {
       { 
         isActive 
         ? <ul className="navigation__menu--mobile">
-            <li><a className="navigation__link" href="#" onClick={toggleMenu} >About</a></li>
-            <li><a className="navigation__link" href="#" onClick={toggleMenu} >Projects</a></li>
+            <li><a className="navigation__link" href="#about" onClick={toggleMenu} >About</a></li>
+            <li><a className="navigation__link" href="#portfolio" onClick={toggleMenu} >Projects</a></li>
             <li><a className="navigation__link" href="#" onClick={toggleMenu} >Resume</a></li>
-            <li><a className="navigation__link" href="#" onClick={toggleMenu} >Contact</a></li>
+            <li><a className="navigation__link" href="#contact" onClick={toggleMenu} >Contact</a></li>
           </ul> 
         : ""
       }
