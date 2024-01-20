@@ -6,7 +6,7 @@ function About() {
 
     return (
       <>
-        <section className="about">
+        <section className="about" id='about'>
           <div className="about__col-1">
             <div className="about__image">
               <CustomSVG/>

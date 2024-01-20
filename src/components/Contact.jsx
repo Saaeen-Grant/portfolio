@@ -5,7 +5,7 @@ function Contact() {
 
     return (
       <>
-        <section className="contact">
+        <section className="contact" id='contact'>
           <div className="contact__heading heading">
             <h2>Contact Me</h2>
             <p>Reach me directly at official.saaeengrant@gmail.com or through this form</p>

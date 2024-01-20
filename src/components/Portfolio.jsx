@@ -4,7 +4,7 @@ function Portfolio() {
 
     return (
       <>
-        <section className="portfolio">
+        <section className="portfolio" id='portfolio'>
           <div className="portfolio__heading heading">
             <h2>Portfolio</h2>
             <p>My best most unique pieces of development work</p>

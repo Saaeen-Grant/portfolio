@@ -21,10 +21,10 @@ function Navigation() {
       </div>
 
       <ul className="navigation__menu--desktop">
-        <li><a className="navigation__link" href="#">About</a></li>
-        <li><a className="navigation__link" href="#">Projects</a></li>
+        <li><a className="navigation__link" href="#about">About</a></li>
+        <li><a className="navigation__link" href="#portfolio">Projects</a></li>
         <li><a className="navigation__link" href="#">Resume</a></li>
-        <li><a className="navigation__link" href="#">Contact</a></li>
+        <li><a className="navigation__link" href="#contact">Contact</a></li>
       </ul>
 
       <div className="navigation__mode" onClick={toggleMode}>
