@@ -1,31 +1,29 @@
+// @import 'colors';
+// @import "breakpoints";
+@use 'utilities' as *;
+@forward 'components'; 
+@forward 'global'; 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-@import 'colors';
-@import "breakpoints";
-@import 'navigation';
-@import 'about';
-@import "button";
-@import "socials";
-@import "intro";
-@import "portfolio";
-@import "contact";
-@import "footer";
 
 
 $font-family: 'Inter', sans-serif;
 
 * {
-    font-family: $font-family;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-size: inherit;
     font-weight: inherit;
     letter-spacing: 0.76px;  
-    color: var(--foreground);
+
 }
 
 .app {
+    font-family: $font-family;
     background-color: var(--background);
+    color: var(--foreground);
     text-align: center;
 
     @include breakpoint(medium) {
@@ -46,12 +44,15 @@ input, textarea {
     @extend %button-cta-format;
 }
 
-a {text-decoration: none;}
+a {
+    text-decoration: none;
+    color: inherit;
+}
 ul {list-style: none;}
 
 svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
 .container { 
@@ -115,15 +116,6 @@ h2 {
 //     line-height: 28px;
 //     font-weight: bold;
 // }
-
-%neutral-text {
-    color: var(--neutral);
-}
-
-%button-cta-format {
-    padding: 12px 20px;
-    border-radius: 8px;
-}
 
 .heading {
     h2 {

@@ -1,9 +1,4 @@
-$dark: #000;
-$light: #fff;
-$neutral-dark: #7C7C7C;
-$neutral-light: #BBBBBB;
-$sun: #FFD951;
-$moon: #A449FF;
+@use '../utilities' as * ;
 
 :root {
     --background: #{$dark};

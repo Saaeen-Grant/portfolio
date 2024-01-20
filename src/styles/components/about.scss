@@ -1,3 +1,5 @@
+@use '../utilities/' as * ;
+
 .about {
   display: flex;
   flex-direction: column;
