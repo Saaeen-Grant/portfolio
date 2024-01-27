@@ -8,7 +8,7 @@ import { DarkModeContextProvider } from './context/DarkModeContext.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <DarkModeContextProvider>
-      <App />
+       <App />
     </DarkModeContextProvider>
   </React.StrictMode>,
 )

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-scroll'
 import {ArrowCircleRight, ArrowCircleUpRight, PaperPlaneTilt} from "@phosphor-icons/react"
 
 const STYLES = ['btn--default','btn--outline', 'btn--text']
@@ -10,13 +10,13 @@ const ICONS = {
     'plane--tilt': <PaperPlaneTilt/>
 }
 
-export const Button = ({children, type, onClick, style, icon}) => {
+export const Button = ({children, type, onClick, style, icon, to, className}) => {
 
     const checkStyle = STYLES.includes(style) ? style : STYLES[0]
     return (
-        <a href="#">
+        <Link smooth={true} duration={500} to={to}>
             <button 
-            className={`btn ${checkStyle}`}
+            className={`btn ${checkStyle} ${className}`}
             onClick={onClick}
             type={type}
             >
@@ -25,6 +25,6 @@ export const Button = ({children, type, onClick, style, icon}) => {
                     {ICONS[icon]}
                 </div>
             </button>
-        </a>
+        </Link>
     )
 }

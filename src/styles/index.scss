@@ -17,10 +17,9 @@ $font-family: 'Inter', sans-serif;
     font-size: inherit;
     font-weight: inherit;
     letter-spacing: 0.76px;  
-    scroll-behavior: smooth;
 }
 
-.app {
+body {
     font-family: $font-family;
     background-color: var(--background);
     color: var(--foreground);
@@ -29,12 +28,12 @@ $font-family: 'Inter', sans-serif;
     @include breakpoint(medium) {
         text-align: left;
     }
-
 }
 
 input, button, textarea {
     font: inherit; 
     outline: none;
+    border: none;
 }
 
 input, textarea {
@@ -51,8 +50,8 @@ a {
 ul {list-style: none;}
 
 svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
 }
 
 .container { 
@@ -64,10 +63,10 @@ svg {
         padding: 24px 0;
 
     }
+}
 
-    > *:not(:last-child) {
-        margin-bottom: 100px;
-    }
+.container > section {
+    margin-bottom: 100px;
 }
 
 p {

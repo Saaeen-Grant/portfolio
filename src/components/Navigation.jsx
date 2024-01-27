@@ -2,48 +2,65 @@ import React from 'react'
 import { useContext ,useState } from "react"
 import { DarkModeContext } from '../context/DarkModeContext'
 import {List, X, Sun, Moon} from "@phosphor-icons/react"
-
-
-
+import { Link } from 'react-scroll'
+import { Link as NavLink } from 'react-router-dom'
 function Navigation() {
-  
-  const [isActive, setIsActive] = useState(false)
-  const {mode, isDarkMode} = useContext(DarkModeContext)
 
+  const navigationLinks = [
+    {
+      'id': 1,
+      'name': 'About',
+      'path': 'about',
+    },
+    {
+      'id': 2,
+      'name': 'Projects',
+      'path': 'portfolio',
+    },
+    {
+      'id': 3,
+      'name': 'Resume',
+      'path': '/resume',
+    },
+    {
+      'id': 4,
+      'name': 'Contact',
+      'path': 'contact',
+    }
+  ]
+  
+  const {mode, toggleMode} = useContext(DarkModeContext)
+  const [isActive, setIsActive] = useState(false)
   const toggleMenu = () => setIsActive((prev) => !prev)
-  const toggleMode = () => isDarkMode((prev) => !prev)
   
   return (
-    <nav className="navigation">
+    <nav className="navigation container">
 
       <div className="navigation__toggle" onClick={toggleMenu}>
           {isActive ? <X/> : <List/>}
       </div>
 
       <ul className="navigation__menu--desktop">
-        <li><a className="navigation__link" href="#about">About</a></li>
-        <li><a className="navigation__link" href="#portfolio">Projects</a></li>
-        <li><a className="navigation__link" href="#">Resume</a></li>
-        <li><a className="navigation__link" href="#contact">Contact</a></li>
+        {navigationLinks.map((link)=> (
+          <li><Link className="navigation__link" smooth={true} duration={500} to={link.path}>{link.name}</Link></li>
+        ))}
+        <li><NavLink to="/resume" >Test</NavLink></li>
       </ul>
 
-      <div className="navigation__mode" onClick={toggleMode}>
+      <button className="navigation__mode" onClick={toggleMode}>
         {
           mode 
           ? <Moon/>
           : <Sun/>
         }
-      </div>
+      </button>
 
-      { 
-        isActive 
-        ? <ul className="navigation__menu--mobile">
-            <li><a className="navigation__link" href="#about" onClick={toggleMenu} >About</a></li>
-            <li><a className="navigation__link" href="#portfolio" onClick={toggleMenu} >Projects</a></li>
-            <li><a className="navigation__link" href="#" onClick={toggleMenu} >Resume</a></li>
-            <li><a className="navigation__link" href="#contact" onClick={toggleMenu} >Contact</a></li>
-          </ul> 
-        : ""
+      { isActive &&
+        <ul className="navigation__menu--mobile">
+          {navigationLinks.map((link)=> (
+             <li><Link className="navigation__link" smooth={true} duration={500} to={link.path} onClick={toggleMenu}>{link.name}</Link></li>
+          ))}
+        </ul> 
       }
       
     </nav>

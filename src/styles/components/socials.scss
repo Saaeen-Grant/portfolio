@@ -15,5 +15,10 @@
         svg * {
             color: var(--background);
         }
+        
+    }
+
+    &__link:hover {
+        transform: scale(1.1,1.1);
     }
 }

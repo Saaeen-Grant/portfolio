@@ -10,9 +10,9 @@ function Socials() {
       <>
         <div className="socials">
             {socials.map(social => (
-              <div className="socials__link">
+              <button className="socials__link">
                 {social}
-              </div>
+              </button>
             ))}
         </div>
       </>

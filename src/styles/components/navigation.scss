@@ -6,8 +6,9 @@
     align-items: center;
     position: relative;
 
-    a:hover {
+    .navigation__link:hover {
         text-shadow:0 0 1px var(--foreground);
+        cursor: pointer;
     }
     
     &__menu--mobile {
@@ -29,12 +30,12 @@
             display: flex;
             width: 100%;
 
-          a {
-            width: 100%;
-            padding: 8px 0;
-            text-align: center;
-            border-radius: 8px;
-          }
+            .navigation__link {
+                width: 100%;
+                padding: 8px 0;
+                text-align: center;
+                border-radius: 8px;
+            }
         }
     }
 

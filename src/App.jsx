@@ -1,28 +1,37 @@
-import Navigation from './components/Navigation'
-import Intro from './components/Intro'
-import Portfolio from './components/Portfolio'
-import About from './components/About'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
 import { DarkModeContext } from './context/DarkModeContext'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
+import { createPortal } from 'react-dom'
+import Model from './components/Modal'
+import Homepage from './routes/Homepage'
+import MyResume from './routes/MyResume'
+import PageNotFound from './routes/PageNotFound'
+import { ModalToggleContextProvider } from './context/ModalToggleContext.jsx'
+import {BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
+
+
 
 function App() {
-  const {mode} = useContext(DarkModeContext)
-  console.log(mode)
 
-  return (
-     <main className="app" data-theme={mode ? "dark" : "light"}>
-       <div className="container">
-        <Navigation/>
-          <Intro/>
-          <Portfolio/>
-          <About/>
-          <Contact/>
-          <Footer/>
-       </div>
-     </main>
-  )
+   const body = document.body
+   const {mode} = useContext(DarkModeContext)
+   body.setAttribute("data-theme", mode)
+
+   const mountElement = document.getElementById('overlay')  
+
+   return (
+      <>
+         <BrowserRouter>
+            <ModalToggleContextProvider>
+               {/* {createPortal(<Model/>, mountElement)} */}
+               <Routes>
+                  <Route path='/' element={<Homepage/>}/>
+                  <Route path='resume'element={<MyResume/>}/>
+                  <Route path='*'element={<PageNotFound/>}/>
+               </Routes>
+            </ModalToggleContextProvider>
+         </BrowserRouter>
+      </>
+   )
 }
 
 export default App
