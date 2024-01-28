@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react'
 import Socials from './Socials'
 import { Button } from './Button'
-import { ModalToggleContext } from '../context/ModalToggleContext'
+import { Link } from 'react-scroll'
+import MyResume from '../assets/saaeen_resume.pdf'
+
+
 
 function Intro() {
 
-  const {toggleModal} = useContext(ModalToggleContext)
 
   return (
     <section className="intro">
@@ -20,8 +22,8 @@ function Intro() {
 
       <div className="intro__cta">
         <div className="intro__buttons">
-          <Button icon={"arrow--right"} to={"contact"}>Contact Me</Button>
-          <Button style={"btn--outline"} icon={"arrow--tilt"} onClick={toggleModal}>View Resume</Button>
+          <Link to='contact' smooth={true} duration={500}><Button icon={"arrow--right"}>Contact Me</Button></Link>
+          <a href={MyResume} target='_blank'><Button style={"btn--outline"} icon={"arrow--tilt"} >View Resume</Button></a>
         </div>
 
         <div className="intro_socials">

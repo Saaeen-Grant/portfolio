@@ -40,7 +40,8 @@ input, textarea {
     border: 1.24px var(--neutral) solid;
     width: 100%;
     background-color: var(--background);
-    @extend %button-cta-format;
+    padding: 12px;
+    border-radius: 8px;
 }
 
 a {

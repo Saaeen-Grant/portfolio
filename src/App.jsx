@@ -3,7 +3,6 @@ import { useContext, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import Model from './components/Modal'
 import Homepage from './routes/Homepage'
-import MyResume from './routes/MyResume'
 import PageNotFound from './routes/PageNotFound'
 import { ModalToggleContextProvider } from './context/ModalToggleContext.jsx'
 import {BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
@@ -25,7 +24,6 @@ function App() {
                {/* {createPortal(<Model/>, mountElement)} */}
                <Routes>
                   <Route path='/' element={<Homepage/>}/>
-                  <Route path='resume'element={<MyResume/>}/>
                   <Route path='*'element={<PageNotFound/>}/>
                </Routes>
             </ModalToggleContextProvider>

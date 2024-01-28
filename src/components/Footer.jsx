@@ -6,7 +6,7 @@ function Footer() {
 
     return (
        <footer className='container'>
-          <p>&copy;2023 Saaeen Grant | All Rights Reserved</p>
+          <p>&copy;2024 Saaeen Grant | All Rights Reserved</p>
           <Socials/>
        </footer>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '../components/Button'
+import { Link } from 'react-router-dom'
 
 function PageNotFound() {
  
@@ -12,13 +13,7 @@ function PageNotFound() {
             </div>
             <div className="error__navigation">
                 <p>Maybe find what you need here?</p>
-                <div className="link--container">
-                    <div className="link" ><a href="#">Home</a></div>
-                    <div className="link" ><a href="#">About</a></div>
-                    <div className="link" ><a href="#">Projects</a></div>
-                    <div className="link" ><a href="#">Resume</a></div>
-                    <div className="link" ><a href="#">Contact</a></div>
-                </div>
+                <Link to="/"><Button icon={"arrow--left"} className="back-btn">Back To Home</Button></Link>
             </div>
           
         </div>

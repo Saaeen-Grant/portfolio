@@ -3,7 +3,15 @@
 .contact {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 12px;
+
+    &__heading {
+        p {
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
 
     form {
         display: flex;
@@ -13,6 +21,11 @@
 
         input,textarea {
             margin-top: 4px;
+            color: var(--foreground);
+        }
+
+        input:focus, textarea:focus {
+            outline: 1.56px var(--foreground) solid;
         }
 
         button {

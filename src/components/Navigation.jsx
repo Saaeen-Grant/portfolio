@@ -4,6 +4,8 @@ import { DarkModeContext } from '../context/DarkModeContext'
 import {List, X, Sun, Moon} from "@phosphor-icons/react"
 import { Link } from 'react-scroll'
 import { Link as NavLink } from 'react-router-dom'
+import MyResume from '../assets/saaeen_resume.pdf'
+
 function Navigation() {
 
   const navigationLinks = [
@@ -19,11 +21,6 @@ function Navigation() {
     },
     {
       'id': 3,
-      'name': 'Resume',
-      'path': '/resume',
-    },
-    {
-      'id': 4,
       'name': 'Contact',
       'path': 'contact',
     }
@@ -42,23 +39,23 @@ function Navigation() {
 
       <ul className="navigation__menu--desktop">
         {navigationLinks.map((link)=> (
-          <li><Link className="navigation__link" smooth={true} duration={500} to={link.path}>{link.name}</Link></li>
+          <li  key={link.id} ><Link className="navigation__link" smooth={true} duration={500} to={link.path}>{link.name}</Link></li>
         ))}
-        <li><NavLink to="/resume" >Test</NavLink></li>
       </ul>
 
-      <button className="navigation__mode" onClick={toggleMode}>
-        {
-          mode 
-          ? <Moon/>
-          : <Sun/>
-        }
-      </button>
+      <div className='navigation__button-container'>
+        <NavLink className="navigation__resume--btn" to={MyResume} target='_blank'>
+          <p>Resume</p>
+        </NavLink>
+        <button className="navigation__mode" onClick={toggleMode}>
+          {mode ? <Moon/> : <Sun/>}
+        </button>
+     </div>
 
       { isActive &&
         <ul className="navigation__menu--mobile">
           {navigationLinks.map((link)=> (
-             <li><Link className="navigation__link" smooth={true} duration={500} to={link.path} onClick={toggleMenu}>{link.name}</Link></li>
+             <li key={link.id} ><Link className="navigation__link" smooth={true} duration={500} to={link.path} onClick={toggleMenu}>{link.name}</Link></li>
           ))}
         </ul> 
       }

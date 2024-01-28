@@ -3,15 +3,14 @@
 :root {
     --sun: #{$sun};
     --moon: #{$moon};
-    --gradient-light: linear-gradient(45deg, hsla(47, 100%, 70%, 0.6) 0%, hsla(270, 100%, 70%, 0.6) 100%);
-    --gradient-dark: linear-gradient(45deg, hsl(47, 100%, 70%) 0%, hsl(270, 100%, 70%) 100%);
 
     --background: #{$dark};
     --foreground: #{$light};
     --neutral: #{$neutral-light};
     --accent: #{$accent-dark};
     --mode: var(--moon);
-    --gradient: var(--gradient-dark);
+    --mode-trans: #{$moon-trans};
+
 }
 
 [data-theme="false"] {
@@ -20,5 +19,5 @@
     --neutral: #{$neutral-dark};
     --accent: #{$accent-light};
     --mode: var(--sun);
-    --gradient: var(--gradient-light);
+    --mode-trans: #{$sun-trans};
 }

@@ -13,6 +13,10 @@
     .btn-icon--none {display: none;}
 }
 
+.btn:hover {
+    transform: scale(1.05,1.05);
+}
+
 .btn--default {
     background-color: var(--foreground);
     color: var(--background); 
@@ -24,7 +28,7 @@
 
 .btn--outline {
     background-color: transparent;
-    border: 1.24px var(--foreground) solid;
+    border: 1.56px var(--foreground) solid;
     color: var(--foreground);
 
     .btn-icon {
