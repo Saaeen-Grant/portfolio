@@ -23,7 +23,7 @@ function App() {
             <ModalToggleContextProvider>
                {/* {createPortal(<Model/>, mountElement)} */}
                <Routes>
-                  <Route path='/' element={<Homepage/>}/>
+                  <Route path='/portfolio' element={<Homepage/>}/>
                   <Route path='*'element={<PageNotFound/>}/>
                </Routes>
             </ModalToggleContextProvider>
