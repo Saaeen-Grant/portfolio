@@ -10,7 +10,7 @@ function Modal() {
     <>
     {isModalActive &&
       <div className="modal">
-        <div className="modal__content--wrapper">
+        {/* <div className="modal__content--wrapper">
           <div className="modal__close--top">
             <h2>Data Not Found</h2>
             <div className="close--icon" onClick={toggleModal}>
@@ -22,7 +22,7 @@ function Modal() {
           <div className="modal__close--bottom">
             <Button onClick={toggleModal} >Close</Button>
           </div>
-        </div>
+        </div> */}
       </div>
     }
     </>

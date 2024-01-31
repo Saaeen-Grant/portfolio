@@ -13,7 +13,7 @@ function PageNotFound() {
             </div>
             <div className="error__navigation">
                 <p>Maybe find what you need here?</p>
-                <Link to="/"><Button icon={"arrow--left"} className="back-btn">Back To Home</Button></Link>
+                <Link to="/portfolio"><Button icon={"arrow--left"} className="back-btn">Back To Home</Button></Link>
             </div>
           
         </div>

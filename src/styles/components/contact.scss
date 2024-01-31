@@ -3,7 +3,7 @@
 .contact {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 24px;
 
     &__heading {
         p {
@@ -16,7 +16,7 @@
     form {
         display: flex;
         flex-direction: column;
-        gap: inherit;
+        gap: 12px;
         text-align: left;
 
         input,textarea {

@@ -35,7 +35,34 @@
     
         .intro__buttons {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             gap: 12px;
+            width: 100%;
+
+            @include breakpoint(medium) {
+                flex-direction: row;
+                width: fit-content;
+            }
+        
+
+            > *{
+                width: 100%;
+
+                .btn {
+                    width: 100%;
+                }
+
+                @include breakpoint(medium) {
+                    width: fit-content;
+
+                    .btn {
+                        width: fit-content;
+                    }
+                }
+
+                
+            }
         }
     }
 }

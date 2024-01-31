@@ -8,6 +8,7 @@
     align-items: center;
     gap: 12px;
     @extend %button-cta-format;
+    text-align: left;
 
     .btn-icon {line-height: 0;}
     .btn-icon--none {display: none;}
