@@ -5,6 +5,8 @@ import {List, X, Sun, Moon} from "@phosphor-icons/react"
 import { Link } from 'react-scroll'
 import { Link as NavLink } from 'react-router-dom'
 import MyResume from '../assets/saaeen_resume.pdf'
+import { createPortal } from 'react-dom'
+
 
 function Navigation() {
 
@@ -26,6 +28,7 @@ function Navigation() {
     }
   ]
   
+  const mountElement = document.getElementById('overlay')  
   const {mode, toggleMode} = useContext(DarkModeContext)
   const [isActive, setIsActive] = useState(false)
   const menuRef = useRef()
@@ -44,7 +47,8 @@ function Navigation() {
   
   return (
     <>
-      {isActive&&<div ref={menuRef} className="navigation-overlay" onClick={closeMenu}></div>}
+      {isActive&&  createPortal(<div ref={menuRef} className="navigation-overlay" onClick={closeMenu}></div>, mountElement)}
+     
       <nav className="navigation container" >
       
         <div className="navigation__toggle" onClick={toggleMenu}>
