@@ -28,7 +28,7 @@ function Navigation() {
     }
   ]
   
-  const mountElement = document.getElementById('overlay')  
+  const mountElement = document.getElementById('root')  
   const {mode, toggleMode} = useContext(DarkModeContext)
   const [isActive, setIsActive] = useState(false)
   const menuRef = useRef()
