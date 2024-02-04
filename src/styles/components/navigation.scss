@@ -32,12 +32,7 @@
     width: 100%;
     z-index: 99;
     background-color: var(--background);
-    
-
-    .navigation__link:hover {
-        background-color: var(--accent);
-        cursor: pointer;
-    }
+    // background-color: pink;
     
     &__menu--mobile {
         display: flex;
@@ -46,17 +41,23 @@
         background-color: var(--background);
         top: 100%;
         left: 0;
-        padding: 8px 0;
-        gap: 8px;
         width: fit-content;
         line-height: 24px;
-        width: 50%;
+        width: 100%;
         border-radius: 0 0 8px 8px;
+        overflow: hidden;
+        padding: 12px 0;
+
+        .navigation__link:hover {
+            background-color: var(--accent);
+            cursor: pointer;
+        }
 
 
         @include breakpoint(medium) {
             display: none;
         }
+        
 
         li {
             display: flex;
@@ -64,14 +65,25 @@
 
             .navigation__link {
                 width: 100%;
-                padding: 12px 0;
+                padding: 24px 0;
                 text-align: center;
             }
         }
+
     }
 
     &__menu--desktop {
         display: none;
+
+        .navigation__link {
+            padding: 8px 0;
+            cursor: pointer;
+        }
+
+        .navigation__link:hover {
+            text-shadow: 1px 0px 0px var(--foreground); 
+        }
+
 
         @include breakpoint(medium) {
             display: flex;
